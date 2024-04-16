@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route per ottenere tutti i prodotti.
 Route::get('products', [ProductController::class, 'products']);
+
+// Route per cercare i prodotti.
+Route::get('products/search_product', [ProductController::class, 'searchProduct']);
