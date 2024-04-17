@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  getproductsSearch() {
+  getproductsSearch(name : any) {
 
   }
 }
