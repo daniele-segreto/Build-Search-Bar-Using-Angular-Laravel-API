@@ -1,8 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 m-auto mt-4">
+      <!-- Campo di input per la ricerca dei prodotti -->
       <div class="form-group">
         <input type="text" (input)="getproductsSearch($event)" class="form-control form-control-lg" placeholder="Search Products">
+      </div>
+
+      <!-- Ciclo su ogni risultato ottenuto dalla ricerca -->
+      <div *ngFor="let result of data">
+        <!-- Carta Bootstrap con corpo -->
+        <div class="card card-body mb-1">
+          <h4>{{ result.title }}</h4> <!-- Titolo del prodotto -->
+          <small class="text-primary">{{ result.description }}</small> <!-- Descrizione del prodotto -->
+        </div>
       </div>
     </div>
   </div>
